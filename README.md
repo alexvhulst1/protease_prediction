@@ -33,28 +33,28 @@ pip install torch scikit-learn pandas numpy ijson h5py json streamlit transforme
 ```
 
 ## Project Structure
-- `uniprotkb_AND_reviewed_true_2024_03_26.json`: UniProt database of all SwissProt proteins.
-- `per-protein.h5`: Embeddings with ProtTrans.
+- `uniprotkb_AND_reviewed_true_2024_03_26.json`: UniProt database of all SwissProt proteins. [The file is too big but can be obtained on the UniProt site]
+- `per-protein.h5`: Embeddings with ProtTrans. [The file is too big but can be obtained on the UniProt site]
 - `protease` directory:
   - `cleavage.csv`: List of cleavages downloaded on the MEROPS site publicly available
   - `problem_1_final.ipynb`: Notebook for training models with and without GO terms based on cleavage lists from `cleavage.csv`.
   - `dic_enzyme.json`: List of the unique integer corresponding to a particular protease (one hot encoding of proteases)
   - `dic_GO_problem_1.json`: List of the unique integer corresponding to a particular GO (one hot encoding of GO)
-  - `model_embedding_pep_site_problem_1_final.pt`: Protease Model trained without GO
-  - `model_embedding_pep_go_site_problem_1_final.pt`: Protease Model trained with GO
+  - `model_embedding_pep_site_problem_1_final.pt`: Protease Model trained without GO [The file is too big to be uploaded here but can be obtained by running problem_1_final]
+  - `model_embedding_pep_go_site_problem_1_final.pt`: Protease Model trained with GO [The file is too big to be uploaded here but can be obtained by running problem_1_final]
 - `E3` directory:
   - `literature.E3.txt`: List of E3 ligases interactions downloaded on the UbiBrowser site publicly available
   - `dic_E3.json`: List of the unique integer corresponding to a particular ligase (one hot encoding of ligases)
   - `dic_GO_problem_2.json`: List of the unique integer corresponding to a particular GO (one hot encoding of GO)
-  - `model_embedding_pep_site_problem_2_final.pt`: E3 ligase Model trained without GO
-  - `model_embedding_pep_go_site_problem_2_final.pt`: E3 ligase Model trained with GO
+  - `model_embedding_pep_site_problem_2_final.pt`: E3 ligase Model trained without GO [The file is too big to be uploaded here but can be obtained by running problem_2_final]
+  - `model_embedding_pep_go_site_problem_2_final.pt`: E3 ligase Model trained with GO [The file is too big to be uploaded here but can be obtained by running problem_2_final]
   - `problem_2_final.ipynb`: Notebook for training E3 ligase models based on respective data.
 - `kinase` directory:
   - `Kinase_Substrate_Dataset`: List of Kinase interactions downloaded on the PhosphoSitePlus site publicly available
   - `dic_kinase.json`: List of the unique integer corresponding to a particular kinase (one hot encoding of kinases)
   - `dic_GO_problem_3.json`: List of the unique integer corresponding to a particular GO (one hot encoding of GO)
-  - `model_embedding_pep_site_problem_3_final.pt`: Kinase Model trained without GO
-  - `model_embedding_pep_go_site_problem_3_final.pt`: Kinase Model trained with GO
+  - `model_embedding_pep_site_problem_3_final.pt`: Kinase Model trained without GO [The file is too big to be uploaded here but can be obtained by running problem_3_final]
+  - `model_embedding_pep_go_site_problem_3_final.pt`: Kinase Model trained with GO [The file is too big to be uploaded here but can be obtained by running problem_3_final]
   - `problem_3_final.ipynb`: Notebook for training kinase models based on respective data.
 - `final_interface.py`: Script for creating the Streamlit application.
 
